@@ -6,6 +6,8 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "connect-query": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "mysql": "^2.18.1",
     "restana": "^4.6.1"
   },
