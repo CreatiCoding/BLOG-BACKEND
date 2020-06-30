@@ -1,0 +1,30 @@
+{
+  "name": "blog-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-query": "^1.0.0",
+    "mysql": "^2.18.1",
+    "restana": "^4.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "pm2 start index.js -i 4 --name blog",
+    "restart": "pm2 restart blog",
+    "stop": "pm2 stop blog"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CreatiCoding/BLOG-BACKEND.git"
+  },
+  "author": "CreatiCoding",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CreatiCoding/BLOG-BACKEND/issues"
+  },
+  "homepage": "https://github.com/CreatiCoding/BLOG-BACKEND#readme"
+}
