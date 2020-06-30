@@ -1,6 +1,10 @@
+require("dotenv").config();
+
 const service = require("restana")();
 const bodyParser = require("body-parser");
 service.use(bodyParser.json());
+const cors = require("cors");
+service.use(cors());
 
 const mysql = require("mysql");
 
@@ -45,9 +49,8 @@ service.get("/version", (req, res) => {
 
 service.get("/post/detail", async (req, res) => {
   const { post_id } = req.query;
-  res.send({
-    result: await query(`SELECT * FROM POST WHERE post_id = ${post_id}`)
-  });
+  const result = await query(`SELECT * FROM POST WHERE post_id = ${post_id}`);
+  res.send({ data: result[0] });
 });
 
 service.post("/post/create", async (req, res) => {
